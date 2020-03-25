@@ -29,9 +29,10 @@ class OurDenseLayer(tf.keras.layers.Layer):
 tf.random.set_seed(1)
 layer = OurDenseLayer(3)
 layer.build((1,2))
-x_input = tf.constant([[1,2.]], shape=(1,2))
+x_input = tf.constant(([1,2.]), shape=(1,2))
 y = layer.call(x_input)
 
 # test the output!
 print(y.numpy())
-#mdl.lab1.test_custom_dense_layer_output(y)
+mdl.lab1.test_custom_dense_layer_output(y)
+#[[0.2697859  0.45750418 0.66536945]
