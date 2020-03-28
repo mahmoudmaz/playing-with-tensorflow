@@ -34,7 +34,7 @@ x_f = 4
 for i in range(500):
   with tf.GradientTape() as tape:
     '''TODO: define the loss as described above'''
-    loss = ( x - x_f)**2
+    loss = (x - x_f)**2
 
   grad = tape.gradient(loss, x) # compute the derivative of the loss with respect to x
   new_x = x - learning_rate*grad # sgd update
